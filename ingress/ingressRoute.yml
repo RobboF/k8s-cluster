@@ -1,0 +1,16 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: traefik-dashboard
+  namespace: ingress
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`traefik.robbo.xyz`) 
+      kind: Rule
+      services:
+        - name: api@internal
+          kind: TraefikService
+  tls:
+    certResolver: default
