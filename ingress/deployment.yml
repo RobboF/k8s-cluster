@@ -3,7 +3,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: traefik
+  name: deployment
   namespace: ingress
   labels:
     app.kubernetes.io/name: traefik
