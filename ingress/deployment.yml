@@ -78,6 +78,8 @@ spec:
           - "--entryPoints.traefik.address=:9000/tcp"
           - "--entryPoints.web.address=:8000"
           - "--entryPoints.websecure.address=:8443"
+          - "--entrypoints.web.http.redirections.entrypoint.permanent=true"
+          - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
           - "--api.dashboard=true"
           - "--ping=true"
           - "--providers.kubernetescrd"

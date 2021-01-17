@@ -3,10 +3,10 @@ kind: Kustomization
 commonLabels:
   app: traefik
 namePrefix: traefik-
-namespace: homepage
+namespace: ingress
 resources:
   - "./deployment.yml"
   - "./service.yml"
-  - "./ingressRoute"
+  - "./ingressRoute.yml"
 
 
